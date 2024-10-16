@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualizador de Proyectos</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+  <header>
+    <h1>Visualizador de Proyectos</h1>
+  </header>
+
+  <main>
+    <h2>Telefonia IP Para Una cadena de Farmacia</h2>
+    <embed src="/doc/Telefonia_IP.pptx.pptx.pdf" type="application/pdf" width="90%" height="800px" />
+
+    <h2>Proyecto 2</h2>
+    <embed src="/doc/Instalacion y Desarrollo de la maquina.pdf" type="application/pdf" width="90%" height="800px" />
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Visualizador de Proyectos</p>
+  </footer>
+  <button id="back-to-top">Regresar arriba</button>
+  <a href="#header"> <a href="ind.html"><button class="back-to-home">Regresar a la página principal</button></a>
+  <script>
+    document.getElementById('back-to-top').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(img/claro.jpg);
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+body.dark-mode {
+    background: url(https://i.pinimg.com/originals/44/6e/3b/446e3b79395a287ca32f7977dd83b290.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#menu-toggle {
+    background: rgb(109, 165, 25);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Solo visible en móviles */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 2rem;
+}
+/* Estilos para la sección "Sobre mí" */
+/* Estilos para la sección "Sobre mí" */
+.perfil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #5499df, #d9e6f2);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.perfil:hover {
+    transform: scale(1.02); /* Sutil efecto de agrandamiento */
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-perfil:hover {
+    transform: rotate(5deg); /* Efecto divertido de rotación */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion {
+    max-width: 600px;
+    color: #333;
+    font-family: 'Poppins', sans-serif; /* Tipografía más moderna */
+    line-height: 1.8;
+}
+
+h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #5a6af0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 0.7rem 0;
+    font-size: 1rem;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: '✓'; /* Agregar un ícono para cada ítem */
+    position: absolute;
+    left: 0;
+    color: #7cb342;
+    font-weight: bold;
+}
+
+/* Botón genérico */
+button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .perfil {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    .descripcion {
+        text-align: center;
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+/* Estilos para la sección "Proyectos" */
+.carousel {
+    position: relative;
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: auto; /* Centrar el carrusel */
+    overflow: hidden; /* Ocultar contenido desbordante */
+}
+
+.carousel-item {
+    display: none; /* Ocultar todos los items inicialmente */
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+    display: flex; /* Mostrar solo el item activo */
+    opacity: 1;
+}
+
+.carousel-video {
+    width: 100%; /* Ajustar el video al ancho del contenedor */
+    height: auto; /* Mantener la relación de aspecto */
+}
+
+.carousel-caption {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10; /* Asegurar que los botones estén encima */
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%; /* Ajustar el ancho máximo en móviles */
+    }
+
+    .carousel-video {
+        width: 100%; /* Mantener el ancho en móviles */
+    }
+}
+
+
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+   
+    bottom: 0;
+    width: 100%;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #333;
+        width: 100px;
+        height: 200px;
+        flex-direction: column;
+        align-items: start;
+        padding-top: 2rem;
+        
+    }
+
+    #menu ul {
+        flex-direction: column;
+    }
+
+    #menu-toggle {
+        display: block; /* Mostrar en móviles */
+    }
+
+    #menu.open {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}

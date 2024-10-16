@@ -1,0 +1,15 @@
+[
+    {
+      "titulo": "Proyecto 1",
+      "descripcion": "Este proyecto consiste en...",
+      "video": "img/electricwires.mp4",
+      "link": "proyecto-sistema-digitales.html"
+    },
+    {
+      "titulo": "Proyecto 2",
+      "descripcion": "Este proyecto consiste en...",
+      "video": "img/arbol.mp4",
+      "link": "pr-estructura_2.html"
+    }
+  ]
+  

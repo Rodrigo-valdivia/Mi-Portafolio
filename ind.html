@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <div id="oscuro"><link rel="stylesheet" href="css-fireflies/index.html"></div>
+    
+</head>
+<body >
+
+    <!-- Encabezado con el botón del menú para móviles -->
+    <header>
+        <h1>Mi Página Personal</h1>
+        <button id="toggle-theme"><h1>Cambiar Tema</h1></button>
+        <button id="menu-toggle" aria-label="Abrir menú">☰ Menú</button>
+        
+
+    </header>
+
+    <!-- Navegación principal -->
+    <nav id="menu">
+        <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="perfil">
+            <img src="img/osias-1- Editado.png" alt="Einar Valdivia" class="foto-perfil">
+            <div class="descripcion">
+                <p>Hola, soy <strong>Einar Rodrigo valdivia</strong>, un desarrollador web especializado en tecnologías modernas y apasionado por el diseño web. Mi objetivo es crear experiencias digitales atractivas y funcionales.</p>
+                <h3>Habilidades</h3>
+                <ul>
+                    <li>HTML, CSS y JavaScript</li>
+                    <li>Frameworks: React, Vue.js</li>
+                    <li>Diseño Responsivo</li>
+                    <li>Desarrollo de API REST</li>
+                </ul>
+                <h3>Intereses</h3>
+                <ul>
+                    <li>Desarrollo web</li>
+                    <li>Fotografía</li>
+                    <li>Viajes</li>
+                    <li>Ciencia ficción</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección "Proyectos" con carrusel de videos -->
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div class="carousel">
+            <div class="carousel-item active">
+                <video class="carousel-video" muted autoplay loop>
+                    <source src="img/bdd.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <div class="carousel-caption">
+                    <a href="proyecto_BD.html"><button><h1>ver proyecto</h1></button></a>
+                    <h3>Proyecto de Base de Datos</h3>
+                    
+                    <p>Proyecto para la gestion de ganado en el Beni</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="carousel-video" muted  loop>
+                    <source src="img/software.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <div class="carousel-caption">
+                    <a href="proyecto-1.html"><button ><h1>ver proyecto</h1></button></a>
+                    <h3>Proyecto Desarrollo de software</h3>
+                    <p> Analisis  Diseño de software para la enpresa de transporte Mixto Itonama</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="carousel-video" muted loop>
+                    <source src="img/IP.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <div class="carousel-caption">
+                    <a href="sistemas-informacion-II.html"><button><h1>ver proyecto</h1></button></a>
+                    <h3>Proyecto Sistemas de Informacion</h3>
+                    <p>Desarrollo de una central telefonica para una cadena de farmacias</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <video class="carousel-video" muted loop>
+                    <source src="img/marcadotecnia.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <div class="carousel-caption">
+                    <a href="mercadotenci.html"><button><h1>ver proyecto</h1></button></a>
+                    <h3>Proyecto  de interaccion social</h3>
+                    <p>Estudio de Mecado Para Enfermeria a domicilio "Cuidarte"</p>
+                </div>
+            </div>
+            <button class="carousel-control prev" id="prev">&#10094;</button>
+            <button class="carousel-control next" id="next">&#10095;</button>
+        </div>
+    </section>
+
+
+    <!-- Sección "Contacto" con formulario -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contact-form" action="#" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+        <div id="form-message"></div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Einar valdivia </p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
+S
